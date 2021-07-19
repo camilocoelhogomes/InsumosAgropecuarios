@@ -42,23 +42,19 @@
     display: flex;
     margin: 0 10vw;
 }
-.input-label{
+.input{
     flex-grow: 1 ;
-
 }
-.input-value{
-    flex-grow: 1;
-    background-color: red;
-}
-.output{
-    flex-grow: 2;
-    background-color: blue;
+.input-line{
+    display: flex;
 }
 .calculo p {
     font-family: 'Open Sans', sans-serif;
     margin-top: 30px;
     font-size: 20px;
 }
-.input-value input{
-    display: block;
+.output{
+    flex-grow: 1;
+    background-color: blue;
 }
+
