@@ -1,11 +1,19 @@
+*:focus{
+    outline: none;
+}
+.margin{
+    width: 100%;
+    height: 1px;
+    background-color: #4D5755;
+}
 .menu-superior{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: 'Titillium Web', sans-serif;
     align-items: center;
+    width: 1160px;
     height: 76px;
-    box-shadow: 0px 1px 5px grey;
-    margin-bottom: 50px;
+    margin: 0 auto;
 }
 .menu-superior h1{
     color: #DF285F;
@@ -29,32 +37,45 @@
 }
 .calculadora {
     width: 100%;
-    height: 80vh;
+    width: 1300px;
+    margin: 40px auto;
 }
 .calculadora h2{
     font-family: 'Titillium Web', sans-serif;
-    margin: 0 5vw;
+    margin: 0 ;
     font-size: 25px;
     color: #DF285F;
     font-weight: bold;
 }
-.calculo{
+.calculo-correcao-de-acidez{
     display: flex;
-    margin: 0 10vw;
+    width: 1160px;
+    margin: 20px auto;
 }
-.input{
+.input-correcao-de-acidez{
     flex-grow: 1 ;
+    margin-right: 5vw;
 }
-.input-line{
-    display: flex;
-}
-.calculo p {
+
+.calculo-correcao-de-acidez p {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 20px;
 }
+.correcao-de-acidez-input-label {
+    display: flex;
+    justify-content: space-between;
+}
+.calculo-correcao-de-acidez input{
+    border: none;
+    border-bottom: 1px solid #4D5755;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
 .output{
-    flex-grow: 1;
+    min-width: 515px;
     background-color: blue;
 }
 
