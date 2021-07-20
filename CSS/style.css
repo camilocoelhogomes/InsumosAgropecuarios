@@ -4,7 +4,8 @@
 .margin{
     width: 100%;
     height: 1px;
-    background-color: #4D5755;
+    background-color: rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 .menu-superior{
     display: flex;
@@ -59,7 +60,7 @@
 
 .calculo-correcao-de-acidez p {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
+    margin-top: 40px;
     font-size: 20px;
 }
 .correcao-de-acidez-input-label {
@@ -76,6 +77,41 @@
 }
 .output{
     min-width: 515px;
-    background-color: blue;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
+}
+.topo-calcario-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botao-obter-recomendacoes{
+    background-color: #DF285F;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    width: 180px;
+    height: 31px;
+    border-radius: 38px;
+    border: none;
+}
+.recomendacao-calcario-output{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #4D5755;
+    height: calc(100% - 70px);
+}
+.seletor-corretor-de-acidez {
+    background-color: #DF285F;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    width: 180px;
+    height: 31px;
+    border-radius: 31px;
+}

@@ -36,9 +36,9 @@
            <p>Saturação de Base</p>
            <input type="number" placeholder="%">
           </div>
-         <div class="correcao-de-acidez-input-label">
+         <div class="correcao-de-acidez-input-label" >
            <p>C.T.C.</p>
-           <input type="number">
+           <input type="number" placeholder="T">
           </div>
          <div class="correcao-de-acidez-input-label">
            <p>Distância Entre Plantas</p>
@@ -50,7 +50,23 @@
           </div>
         </div>
         <div class="output">
+          <div class="topo-calcario-output">
+            <select name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez" >
+              <option value="70">Calcário Calcítico</option>
+              <option value="70">Calcário Magnesiano</option>
+              <option value="70">Calcário Dolomítico</option>
+              <option value="120">Calcário Calcinado</option>
+              <option value="160">Cal Virgem Dolomítica</option>
+              <option value="140">Cal Virgem Agrícola</option>
+              <option value="60">Escória Siderurgica</option>
+              <option value="50">Cálcio silício ou Agrosilício</option>
+              <option value="27">Serpentino-Silimag</option>
+            </select>
+            <button class='botao-obter-recomendacoes'>Obter Recomendações</button>
+          </div>
+          <div class="recomendacao-calcario-output">
 
+          </div>
         </div>
       </div>
     </div>
