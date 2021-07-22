@@ -16,41 +16,48 @@
     <title>Insumos Agropecuários</title>
   </head>
   <body>
-    <div class="menu-superior">
-      <h1>Insumos Agropecuários</h1>
-      <div class="navegacao">
-        <a href="#">Calculadora</a>
+    
+    <div class="top-container">
+
+      <div class="menu-superior">
+        <h1>Insumos Agropecuários</h1>
+        <div class="navegacao">
+          <a href="#">Calculadora</a>
+        </div>
+        <button>Entre</button>
       </div>
-      <button>Entre</button>
+      <div class="margin"></div>
+
     </div>
-    <div class="margin"></div>
-    <div class="calculadora">
+
+
+    <div class="main">
       <h2>Correção de Acidez</h2>
-      <div class="calculo-correcao-de-acidez">
-        <div class="input-correcao-de-acidez">
-         <div class="correcao-de-acidez-input-label">
+      <div class="calculator">
+        <div class="calculator-input">
+         <div class="calculator-input-line">
            <p>Profundidade</p>
            <input type="number" placeholder="cm">
          </div>
-         <div class="correcao-de-acidez-input-label">
+         <div class="calculator-input-line">
            <p>Saturação de Base</p>
            <input type="number" placeholder="%">
           </div>
-         <div class="correcao-de-acidez-input-label" >
+         <div class="calculator-input-line" >
            <p>C.T.C.</p>
            <input type="number" placeholder="T">
           </div>
-         <div class="correcao-de-acidez-input-label">
+         <div class="calculator-input-line">
            <p>Distância Entre Plantas</p>
            <input type="number" placeholder="m">
           </div>
-         <div class="correcao-de-acidez-input-label">
+         <div class="calculator-input-line">
            <p>Distância Entre Linhas</p>
            <input type="number" placeholder="m">
           </div>
         </div>
         <div class="output">
-          <div class="topo-calcario-output">
+          <div class="output-header">
             <select name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez" >
               <option value="70">Calcário Calcítico</option>
               <option value="70">Calcário Magnesiano</option>
@@ -62,13 +69,55 @@
               <option value="50">Cálcio silício ou Agrosilício</option>
               <option value="27">Serpentino-Silimag</option>
             </select>
-            <button class='botao-obter-recomendacoes'>Obter Recomendações</button>
+            <button class='recommendation-bottom'>Obter Recomendações</button>
           </div>
-          <div class="recomendacao-calcario-output">
-
+          <div class="output-recommendation">
           </div>
         </div>
       </div>
+      
+      <h2>Demanda de Macro Nutrientes</h2>
+      <div class="calculator">
+        <div class="calculator-input">
+         <div class="calculator-input-line">
+           <p>Produtividade Esperada</p>
+           <input type="number" placeholder="sc/ha">
+         </div>
+         <div class="calculator-input-line">
+           <p>Distância entre Linhas</p>
+           <input type="number" placeholder="m">
+          </div>
+         <div class="calculator-input-line" >
+           <p>Distância entre Plantas</p>
+           <input type="number" placeholder="m">
+          </div>
+         <div class="calculator-input-line">
+           <p>Temperatura média anual</p>
+           <input type="number" placeholder="ºC">
+          </div>
+         <div class="calculator-input-line">
+           <p>Fósforo</p>
+           <input type="number" placeholder="P mg/dm³">
+          </div>
+          <div class="calculator-input-line">
+            <p>Potássio</p>
+            <input type="number" placeholder="K mg/dm³">
+           </div>
+        </div>
+        <div class="output">
+          <div class="output-header">
+            <div class="output-solo-analisis">
+              <input type="checkbox" name="solo-analisis" id="solo-analisis" value='true'>
+              <label for="solo-analises">Não Possuo analise de solo</label>
+            </div>
+            <button class='recommendation-bottom'>Obter Recomendações</button>
+          </div>
+          <div class="output-recommendation">
+          </div>
+        </div>
+      </div>
+           
+      
     </div>
   </body>
 </html>

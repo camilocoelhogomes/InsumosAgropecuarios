@@ -1,6 +1,14 @@
 *:focus{
     outline: none;
 }
+.top-container{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+}
 .margin{
     width: 100%;
     height: 1px;
@@ -15,6 +23,7 @@
     width: 1300px;
     height: 76px;
     margin: 0 auto;
+
 }
 .menu-superior h1{
     color: #DF285F;
@@ -36,39 +45,39 @@
     border-radius: 38px;
     border: none;
 }
-.calculadora {
+.main {
     width: 100%;
     width: 1300px;
-    margin: 40px auto;
+    margin: 116px auto;
 }
-.calculadora h2{
+.main h2{
     font-family: 'Titillium Web', sans-serif;
     margin: 0 ;
     font-size: 25px;
     color: #DF285F;
     font-weight: bold;
 }
-.calculo-correcao-de-acidez{
+.calculator{
     display: flex;
     width: 1160px;
-    margin: 20px auto;
+    margin: 20px auto 60px auto;
 }
-.input-correcao-de-acidez{
+.calculator-input{
     flex-grow: 1 ;
     margin-right: 5vw;
 }
 
-.calculo-correcao-de-acidez p {
+.calculator p {
     font-family: 'Open Sans', sans-serif;
     margin-top: 40px;
     font-size: 20px;
 }
-.correcao-de-acidez-input-label {
+.calculator-input-line {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
-.calculo-correcao-de-acidez input{
+.calculator input{
     border: none;
     border-bottom: 1px solid #4D5755;
     font-family: 'Open Sans',sans-serif;
@@ -85,12 +94,12 @@
     justify-content: flex-end;
 
 }
-.topo-calcario-output {
+.output-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.botao-obter-recomendacoes{
+.recommendation-bottom{
     background-color: #DF285F;
     color: #fff;
     font-weight: bold;
@@ -101,7 +110,7 @@
     border-radius: 38px;
     border: none;
 }
-.recomendacao-calcario-output{
+.output-recommendation{
     width: 100%;
     margin-top: 10px;
     border-radius: 10px;
@@ -118,4 +127,13 @@
     height: 31px;
     border-radius: 31px;
     border: none;
+}
+.output-solo-analisis  label{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.output-solo-analisis input{
+    width: 20px;
+    height: 20px;
 }
