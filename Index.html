@@ -1,123 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
-    <!-- Link Css -->
-    <link rel="stylesheet" href="./CSS/Reset.css">
-    <link rel="stylesheet" href="./CSS/style.css">
-    
-    <title>Insumos Agropecuários</title>
-  </head>
-  <body>
-    
-    <div class="top-container">
 
-      <div class="menu-superior">
-        <h1>Insumos Agropecuários</h1>
-        <div class="navegacao">
-          <a href="#">Calculadora</a>
-        </div>
-        <button>Entre</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <!-- Link Css -->
+  <link rel="stylesheet" href="./CSS/Reset.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+
+  <title>Insumos Agropecuários</title>
+</head>
+
+<body>
+
+  <div class="top-container">
+
+    <div class="menu-superior">
+      <h1>Insumos Agropecuários</h1>
+      <div class="navegacao">
+        <a href="#">Calculadora</a>
       </div>
-      <div class="margin"></div>
+      <button>Entre</button>
+    </div>
+    <div class="margin"></div>
 
+  </div>
+
+
+  <div class="main">
+
+    <h2>Demanda de Macro Nutrientes</h2>
+    <div class="calculator">
+      <div class="calculator-input">
+        <div class="calculator-input-line">
+          <p>Produtividade Esperada</p>
+          <input class="productivity" onchange="getValue('productivity',this)" type="number" placeholder="sc/ha">
+        </div>
+        <div class="calculator-input-line">
+          <p>Distância entre Linhas</p>
+          <input class='distanceLines' onchange="getValue('distanceLines',this)" type="number" placeholder="m">
+        </div>
+        <div class="calculator-input-line">
+          <p>Distância entre Plantas</p>
+          <input class='distancePlants' onchange="getValue('distancePlants',this)" type="number" placeholder="m">
+        </div>
+        <div class="calculator-input-line">
+          <p>Temperatura média anual</p>
+          <input class='temperature' onchange="getValue('temperature',this)" type="number" placeholder="ºC">
+        </div>
+        <div class="calculator-input-line phosphor">
+          <p>Fósforo</p>
+          <input class="phosphor" onchange="getValue('phosphor',this)" type="number" placeholder="P mg/dm³">
+        </div>
+        <div class="calculator-input-line potassium">
+          <p>Potássio</p>
+          <input class='potassium' onchange="getValue('potassium',this)" type="number" placeholder="K mg/dm³">
+        </div>
+      </div>
+      <div class="output">
+        <div class="output-header">
+          <div class="output-solo-analisis">
+            <input onchange="getValue('soloAnalisys',this)" type="checkbox" name="solo-analisis" id="solo-analisis">
+            <label for="solo-analises">Não Possuo analise de solo</label>
+          </div>
+          <button class='recommendation-bottom'>Obter Recomendações</button>
+        </div>
+        <div class="output-recommendation">
+        </div>
+      </div>
+    </div>
+
+    <h2>Correção de Acidez</h2>
+    <div class="calculator">
+      <div class="calculator-input">
+        <div class="calculator-input-line">
+          <p>Profundidade</p>
+          <input type="number" placeholder="cm">
+        </div>
+        <div class="calculator-input-line">
+          <p>Saturação de Base</p>
+          <input type="number" placeholder="%">
+        </div>
+        <div class="calculator-input-line">
+          <p>C.T.C.</p>
+          <input type="number" placeholder="T">
+        </div>
+        <div class="calculator-input-line">
+          <p>Distância Entre Plantas</p>
+          <input type="number" placeholder="m">
+        </div>
+        <div class="calculator-input-line">
+          <p>Distância Entre Linhas</p>
+          <input type="number" placeholder="m">
+        </div>
+      </div>
+      <div class="output">
+        <div class="output-header">
+          <select name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez">
+            <option value="70">Calcário Calcítico</option>
+            <option value="70">Calcário Magnesiano</option>
+            <option value="70">Calcário Dolomítico</option>
+            <option value="120">Calcário Calcinado</option>
+            <option value="160">Cal Virgem Dolomítica</option>
+            <option value="140">Cal Virgem Agrícola</option>
+            <option value="60">Escória Siderurgica</option>
+            <option value="50">Cálcio silício ou Agrosilício</option>
+            <option value="27">Serpentino-Silimag</option>
+          </select>
+          <button class='recommendation-bottom'>Obter Recomendações</button>
+        </div>
+        <div class="output-recommendation">
+        </div>
+      </div>
     </div>
 
 
-    <div class="main">
-      <h2>Correção de Acidez</h2>
-      <div class="calculator">
-        <div class="calculator-input">
-         <div class="calculator-input-line">
-           <p>Profundidade</p>
-           <input type="number" placeholder="cm">
-         </div>
-         <div class="calculator-input-line">
-           <p>Saturação de Base</p>
-           <input type="number" placeholder="%">
-          </div>
-         <div class="calculator-input-line" >
-           <p>C.T.C.</p>
-           <input type="number" placeholder="T">
-          </div>
-         <div class="calculator-input-line">
-           <p>Distância Entre Plantas</p>
-           <input type="number" placeholder="m">
-          </div>
-         <div class="calculator-input-line">
-           <p>Distância Entre Linhas</p>
-           <input type="number" placeholder="m">
-          </div>
-        </div>
-        <div class="output">
-          <div class="output-header">
-            <select name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez" >
-              <option value="70">Calcário Calcítico</option>
-              <option value="70">Calcário Magnesiano</option>
-              <option value="70">Calcário Dolomítico</option>
-              <option value="120">Calcário Calcinado</option>
-              <option value="160">Cal Virgem Dolomítica</option>
-              <option value="140">Cal Virgem Agrícola</option>
-              <option value="60">Escória Siderurgica</option>
-              <option value="50">Cálcio silício ou Agrosilício</option>
-              <option value="27">Serpentino-Silimag</option>
-            </select>
-            <button class='recommendation-bottom'>Obter Recomendações</button>
-          </div>
-          <div class="output-recommendation">
-          </div>
-        </div>
-      </div>
-      
-      <h2>Demanda de Macro Nutrientes</h2>
-      <div class="calculator">
-        <div class="calculator-input">
-         <div class="calculator-input-line">
-           <p>Produtividade Esperada</p>
-           <input type="number" placeholder="sc/ha">
-         </div>
-         <div class="calculator-input-line">
-           <p>Distância entre Linhas</p>
-           <input type="number" placeholder="m">
-          </div>
-         <div class="calculator-input-line" >
-           <p>Distância entre Plantas</p>
-           <input type="number" placeholder="m">
-          </div>
-         <div class="calculator-input-line">
-           <p>Temperatura média anual</p>
-           <input type="number" placeholder="ºC">
-          </div>
-         <div class="calculator-input-line">
-           <p>Fósforo</p>
-           <input type="number" placeholder="P mg/dm³">
-          </div>
-          <div class="calculator-input-line">
-            <p>Potássio</p>
-            <input type="number" placeholder="K mg/dm³">
-           </div>
-        </div>
-        <div class="output">
-          <div class="output-header">
-            <div class="output-solo-analisis">
-              <input type="checkbox" name="solo-analisis" id="solo-analisis" value='true'>
-              <label for="solo-analises">Não Possuo analise de solo</label>
-            </div>
-            <button class='recommendation-bottom'>Obter Recomendações</button>
-          </div>
-          <div class="output-recommendation">
-          </div>
-        </div>
-      </div>
-           
-      
-    </div>
-  </body>
+
+  </div>
+
+  <script src='./script/script.js'></script>
+</body>
+
 </html>

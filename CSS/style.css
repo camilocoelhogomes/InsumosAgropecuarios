@@ -137,3 +137,6 @@
     width: 20px;
     height: 20px;
 }
+.red-border{
+    box-shadow: inset 5px 0px 0px red;
+}
