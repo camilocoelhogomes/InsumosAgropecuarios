@@ -32,9 +32,11 @@ function calcario() {
     const NC = calcarioCalculator(dataLand.deph, dataLand.baseSaturation, dataLand.ctc, dataLand.PRNT).toFixed(2);
     const NCPlant = eachPlant(NC, dataLand.distanceLines, dataLand.distancePlants, 1000).toFixed(2)
     document.querySelector('.calcario.output-recommendation').innerHTML =
-        `<p class='output-recommendation-result'>
-        Será nescessário a utilizaçã de ${NC} Toneladas de Calcário por hectare <br>
-        Sendo Nescessário a aplicação de ${NCPlant} kg por planta 
-        </p>    
-    `
+        `<div class='calcario output-recommendation-result'>
+            <p>Correção nescessária:
+            <ul>
+                <li>Demanda por Hectare: ${NC}</li>
+                </li>Demandao por Planta: ${NCPlant}</li>
+            </ul>
+        </div>`
 }

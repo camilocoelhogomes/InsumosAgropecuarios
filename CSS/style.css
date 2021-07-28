@@ -116,6 +116,9 @@
     border-radius: 10px;
     border: 1px solid #4D5755;
     height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .seletor-corretor-de-acidez {
     background-color: #DF285F;
