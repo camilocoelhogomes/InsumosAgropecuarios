@@ -87,6 +87,17 @@
     text-align: center;
 
 }
+.calculator input.red-border{
+    border: none;
+    box-sizing: border-box;
+    border: 2px solid red;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+
+}
 .output{
     min-width: 515px;
     display: flex;
@@ -119,6 +130,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px;
 }
 .seletor-corretor-de-acidez {
     background-color: #DF285F;
@@ -141,5 +154,6 @@
     height: 20px;
 }
 .red-border{
-    box-shadow: inset 5px 0px 0px red;
+    box-sizing: border-box;
+    border: 5px solid red;
 }

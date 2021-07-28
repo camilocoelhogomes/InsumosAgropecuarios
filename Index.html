@@ -88,26 +88,29 @@
       <h2>Correção de Acidez</h2>
     </header>
     <div class="calculator">
-      <div class="calculator-input">
+      <div class="calculator-input calcario">
         <div class="calculator-input-line">
           <p>Profundidade</p>
-          <input onchange="getValue('deph',this)" type="number" step='0.01' placeholder="cm">
+          <input class='deph' onchange="getValue('deph',this)" type="number" step='0.01' placeholder="cm">
         </div>
         <div class="calculator-input-line">
           <p>Saturação de Base</p>
-          <input onchange="getValue('baseSaturation',this)" type="number" step='0.01' placeholder="%">
+          <input class='baseSaturation' onchange="getValue('baseSaturation',this)" type="number" step='0.01'
+            placeholder="%">
         </div>
         <div class="calculator-input-line">
           <p>C.T.C.</p>
-          <input onchange="getValue('ctc',this)" type="number" step='0.01' placeholder="T">
+          <input class='ctc' onchange="getValue('ctc',this)" type="number" step='0.01' placeholder="T">
         </div>
         <div class="calculator-input-line">
           <p>Distância Entre Linhas</p>
-          <input onchange="getValue('distanceLines',this)" type="number" step='0.01' placeholder="m">
+          <input class='distanceLines' onchange="getValue('distanceLines',this)" type="number" step='0.01'
+            placeholder="m">
         </div>
         <div class="calculator-input-line">
           <p>Distância Entre Plantas</p>
-          <input onchange="getValue('distancePlants',this)" type="number" step='0.01' placeholder="m">
+          <input class='distancePlants' onchange="getValue('distancePlants',this)" type="number" step='0.01'
+            placeholder="m">
         </div>
       </div>
       <div class="output">
