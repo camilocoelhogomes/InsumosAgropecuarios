@@ -66,7 +66,7 @@
       <div class="output">
         <div class="output-header">
           <div class="output-solo-analisis">
-            <input onchange="getValue('soloAnalisys',this)" type="checkbox" name="solo-analisis" id="solo-analisis">
+            <input type="checkbox" name="solo-analisis" id="solo-analisis">
             <label for="solo-analises">Não Possuo analise de solo</label>
           </div>
           <button class='recommendation-bottom'>Obter Recomendações</button>
@@ -81,28 +81,28 @@
       <div class="calculator-input">
         <div class="calculator-input-line">
           <p>Profundidade</p>
-          <input type="number" placeholder="cm">
+          <input onchange="getValue('deph',this)" type="number" placeholder="cm">
         </div>
         <div class="calculator-input-line">
           <p>Saturação de Base</p>
-          <input type="number" placeholder="%">
+          <input onchange="getValue('baseSaturation',this)" type="number" placeholder="%">
         </div>
         <div class="calculator-input-line">
           <p>C.T.C.</p>
-          <input type="number" placeholder="T">
-        </div>
-        <div class="calculator-input-line">
-          <p>Distância Entre Plantas</p>
-          <input type="number" placeholder="m">
+          <input onchange="getValue('ctc',this)" type="number" placeholder="T">
         </div>
         <div class="calculator-input-line">
           <p>Distância Entre Linhas</p>
-          <input type="number" placeholder="m">
+          <input onchange="getValue('distanceLines',this)" type="number" placeholder="m">
+        </div>
+        <div class="calculator-input-line">
+          <p>Distância Entre Plantas</p>
+          <input onchange="getValue('distancePlants',this)" type="number" placeholder="m">
         </div>
       </div>
       <div class="output">
         <div class="output-header">
-          <select name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez">
+          <select onchange="getValue('PRNT',this)" name="seletor_corretor_de_acidez" class="seletor-corretor-de-acidez">
             <option value="70">Calcário Calcítico</option>
             <option value="70">Calcário Magnesiano</option>
             <option value="70">Calcário Dolomítico</option>
@@ -113,9 +113,9 @@
             <option value="50">Cálcio silício ou Agrosilício</option>
             <option value="27">Serpentino-Silimag</option>
           </select>
-          <button class='recommendation-bottom'>Obter Recomendações</button>
+          <button onclick="calcario()" class='recommendation-bottom'>Obter Recomendações</button>
         </div>
-        <div class="output-recommendation">
+        <div class="calcario output-recommendation">
         </div>
       </div>
     </div>
