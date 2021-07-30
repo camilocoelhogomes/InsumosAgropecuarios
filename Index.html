@@ -73,11 +73,11 @@
       </div>
       <div class="output">
         <div class="output-header">
-          <div class="output-solo-analisis">
-            <input type="checkbox" name="solo-analisis" id="solo-analisis">
-            <label for="solo-analises">Não Possuo analise de solo</label>
+          <div onclick='haveNotSoloAnalisis(this)' class="output-solo-analisis">
+            <ion-icon class='checkbox' name="checkbox"></ion-icon>
+            <p>Não possuo analise de Solo</p>
           </div>
-          <button onclick='macroNutrientsCalculator()' class='recommendation-bottom'>Obter Recomendações</button>
+          <button onclick='macroNutrientsCalculator()' class='recommendation-buttom'>Obter Recomendações</button>
         </div>
         <div class="macro-nutrients output-recommendation">
         </div>
@@ -126,7 +126,7 @@
             <option value="50">Cálcio silício ou Agrosilício</option>
             <option value="27">Serpentino-Silimag</option>
           </select>
-          <button onclick="calcario()" class='recommendation-bottom'>Obter Recomendações</button>
+          <button onclick="calcario()" class='recommendation-buttom'>Obter Recomendações</button>
         </div>
         <div class="calcario output-recommendation">
         </div>
@@ -137,6 +137,9 @@
 
   </main>
 
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src='./script/script.js'></script>
 </body>
 

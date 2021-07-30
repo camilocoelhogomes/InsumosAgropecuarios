@@ -1,4 +1,5 @@
 let dataLand = {
+    soloAnalisys: true,
     productivity: 0,
     distanceLines: 0,
     distancePlants: 0,
@@ -121,32 +122,69 @@ function productivityAdjuste(npkNeeded) {
 }
 
 function macroNutrientsCalculator() {
-    if (entriesTester('macro-nutrients', ['productivity', 'distanceLines', 'distancePlants', 'temperature', 'phosphor', 'potassium'])) {
-        let npkNeeded = {
-            nitrogen: [6.2, 6.2],
-            phosphor: [0.6, 0.6],
-            potassium: [5.9, 5.9],
-        };
-        npkNeeded = temperatureAdjuste(npkNeeded);
-        npkNeeded = plantsDensityAdjuste(npkNeeded)
-        npkNeeded = phosphorAdjuste(npkNeeded);
-        npkNeeded = potassiumAdjuste(npkNeeded);
-        npkNeeded = productivityAdjuste(npkNeeded);
+    if (dataLand.soloAnalisys) {
+        if (entriesTester('macro-nutrients', ['productivity', 'distanceLines', 'distancePlants', 'temperature', 'phosphor', 'potassium'])) {
+            let npkNeeded = {
+                nitrogen: [6.2, 6.2],
+                phosphor: [0.6, 0.6],
+                potassium: [5.9, 5.9],
+            };
+            npkNeeded = temperatureAdjuste(npkNeeded);
+            npkNeeded = plantsDensityAdjuste(npkNeeded)
+            npkNeeded = phosphorAdjuste(npkNeeded);
+            npkNeeded = potassiumAdjuste(npkNeeded);
+            npkNeeded = productivityAdjuste(npkNeeded);
 
-        document.querySelector('.macro-nutrients.output-recommendation').innerHTML =
-            `<div class='macro-nutrients output-recommendation-result'>
-                <p>Correção nescessária:</p>
-                <ul>
-                    <li>Demanda por Nitrogênio: <strong>${npkNeeded.nitrogen[0]} - ${npkNeeded.nitrogen[1]}</strong> kG/ha</li>
-                    <li>Demanda por Fósforo: <strong>${npkNeeded.phosphor[0]} - ${npkNeeded.phosphor[1]}</strong> kG/ha</li>
-                    <li>Demanda por Potássio: <strong>${npkNeeded.potassium[0]} - ${npkNeeded.potassium[1]}</strong> kG/ha</li>
-                </ul>
-            </div>`
+            document.querySelector('.macro-nutrients.output-recommendation').innerHTML =
+                `<div class='macro-nutrients output-recommendation-result'>
+                    <p>Correção nescessária:</p>
+                    <ul>
+                        <li>Demanda por Nitrogênio: <strong>${npkNeeded.nitrogen[0]} - ${npkNeeded.nitrogen[1]}</strong> kG/ha</li>
+                        <li>Demanda por Fósforo: <strong>${npkNeeded.phosphor[0]} - ${npkNeeded.phosphor[1]}</strong> kG/ha</li>
+                        <li>Demanda por Potássio: <strong>${npkNeeded.potassium[0]} - ${npkNeeded.potassium[1]}</strong> kG/ha</li>
+                    </ul>
+                </div>`
+        }
+        else {
+            document.querySelector('.macro-nutrients.output-recommendation').innerHTML =
+                `<div class='macro-nutrients output-recommendation-result'>
+                    <p>Preencha os dados em vermelho</p>
+                </div>`
+        }
     }
-    else {
-        document.querySelector('.calcario.output-recommendation').innerHTML =
-            `<div class='calcario output-recommendation-result'>
-        <p>Preencha os dados em vermelho</p>
-        </div>`
+    else if (!dataLand.soloAnalisys) {
+        if (entriesTester('macro-nutrients', ['productivity', 'distanceLines', 'distancePlants', 'temperature'])) {
+            let npkNeeded = {
+                nitrogen: [6.2, 6.2],
+                phosphor: [0.6, 0.6],
+                potassium: [5.9, 5.9],
+            };
+            npkNeeded = temperatureAdjuste(npkNeeded);
+            npkNeeded = plantsDensityAdjuste(npkNeeded)
+            npkNeeded = productivityAdjuste(npkNeeded);
+
+            document.querySelector('.macro-nutrients.output-recommendation').innerHTML =
+                `<div class='macro-nutrients output-recommendation-result'>
+                    <p>Correção nescessária:</p>
+                    <ul>
+                        <li>Demanda por Nitrogênio: <strong>${npkNeeded.nitrogen[0]} - ${npkNeeded.nitrogen[1]}</strong> kG/ha</li>
+                        <li>Demanda por Fósforo: <strong>${npkNeeded.phosphor[0]} - ${npkNeeded.phosphor[1]}</strong> kG/ha</li>
+                        <li>Demanda por Potássio: <strong>${npkNeeded.potassium[0]} - ${npkNeeded.potassium[1]}</strong> kG/ha</li>
+                    </ul>
+                </div>`
+        }
+        else {
+            document.querySelector('.macro-nutrients.output-recommendation').innerHTML =
+                `<div class='macro-nutrients output-recommendation-result'>
+                    <p>Preencha os dados em vermelho</p>
+                </div>`
+        }
     }
+}
+function haveNotSoloAnalisis(element) {
+    dataLand.soloAnalisys = !dataLand.soloAnalisys;
+    console.log(dataLand.soloAnalisys);
+    element.querySelector('ion-icon').classList.toggle('checkbox-clicked');
+    document.querySelector('.phosphor').parentNode.classList.toggle('hided');
+    document.querySelector('.potassium').parentNode.classList.toggle('hided');
 }
