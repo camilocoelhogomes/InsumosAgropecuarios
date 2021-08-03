@@ -123,7 +123,7 @@ function potassiumAdjuste(npkNeeded) {
     if (dataLand.potassium < 60) {
         npkNeeded.potassium = [npkNeeded.potassium[0] += 0.2 * npkSaca.potassium[0], npkNeeded.potassium[1] += 0.3 * npkSaca.potassium[1]]
     }
-    
+
     else if (dataLand.potassium < 110) {
         npkNeeded.potassium = [npkNeeded.potassium[0], npkNeeded.potassium[1]]
     }
@@ -151,7 +151,7 @@ function macroNutrientsCalculator() {
 
     if (dataLand.soloAnalisys) {
         if (entriesTester('macro-nutrients', ['productivity', 'distanceLines', 'distancePlants', 'temperature', 'phosphor', 'potassium'])) {
-            
+
             let npkNeeded = {
                 nitrogen: [6.2, 6.2],
                 phosphor: [0.6, 0.6],
@@ -189,7 +189,7 @@ function macroNutrientsCalculator() {
     else if (!dataLand.soloAnalisys) {
 
         if (entriesTester('macro-nutrients', ['productivity', 'distanceLines', 'distancePlants', 'temperature'])) {
-            
+
             let npkNeeded = {
                 nitrogen: [6.2, 6.2],
                 phosphor: [0.6, 0.6],
@@ -230,5 +230,7 @@ function haveNotSoloAnalisis(element) {
     element.querySelector('ion-icon').classList.toggle('checkbox-clicked');
     document.querySelector('.phosphor').parentNode.classList.toggle('hided');
     document.querySelector('.potassium').parentNode.classList.toggle('hided');
-    
+
 }
+
+
