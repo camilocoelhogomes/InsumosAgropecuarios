@@ -75,8 +75,7 @@ function renderCalculator(info, calculator) {
             onchange="getValue('${item}',this)" 
             type="number" 
             step='0.01'
-            placeholder="${info[item].label} (${info[item].unit})"
-            value="${info[item].value}"
+            placeholder="${info[item].label} (${info[item].unit})"          
             >
         </li>`
         });
@@ -91,7 +90,7 @@ function renderCalculator(info, calculator) {
             type="number" 
             step='0.01'
             placeholder="${info[item].unit}"
-            value="${info[item].value}">
+            >
         </li>`
         });
     }
