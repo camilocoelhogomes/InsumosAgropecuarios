@@ -20,6 +20,7 @@ const npkSaca = {
 
 function getValue(variable, element) {
     dataLand[variable] = Number(element.value);
+    cultures[0].macroNutrients[variable].value = element.value;
 }
 
 function calcarioCalculator(deph, baseSaturation, ctc, PRNT) {
