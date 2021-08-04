@@ -226,7 +226,6 @@ function macroNutrientsCalculator() {
 function haveNotSoloAnalisis(element) {
 
     dataLand.soloAnalisys = !dataLand.soloAnalisys;
-    console.log(dataLand.soloAnalisys);
     element.querySelector('ion-icon').classList.toggle('checkbox-clicked');
     document.querySelector('.phosphor').parentNode.classList.toggle('hided');
     document.querySelector('.potassium').parentNode.classList.toggle('hided');

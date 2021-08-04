@@ -1,7 +1,6 @@
 *:focus{
     outline: none;
 }
-
 .top-container{
     width: 100%;
     position: fixed;
@@ -99,7 +98,6 @@
     width: 200px;
     height: 25px;
     text-align: center;
-
 }
 
 .calculator input.red-border{
@@ -208,6 +206,7 @@
 header{
     display: flex;
     justify-content: space-around;
+    width: 50%;
 }
 
 .output-solo-analisis{
@@ -216,10 +215,14 @@ header{
 }
 
 @media(max-width: 1300px){
-    
+    header{
+        width: 100%;
+    }
+
     .menu-superior{
         width: 100%;
         padding: 0 5vw;
+        box-sizing: border-box;
     }   
 
     .main{
@@ -256,5 +259,22 @@ header{
 
     .output{
         height: calc(40vh - 71px);
+    }
+}
+
+@media(max-width: 700px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .calculator-input-line{
+        width: 100%;
+    }
+    .calculator input{
+        width: 100%;
+    }
+    .output{
+        min-width: 0;
+        width: 100%;
     }
 }
