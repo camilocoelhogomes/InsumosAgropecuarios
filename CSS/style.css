@@ -267,6 +267,9 @@ header{
         flex-direction: column;
         align-items: center;
     }
+    .menu-superior{
+        flex-direction: row;
+    }
     .calculator-input-line{
         width: 100%;
     }
