@@ -101,12 +101,11 @@ function renderCalculator(info, calculator) {
 
 
 
-
 const renderMain = () => {
     APP.innerHTML = '';
 
     APP.innerHTML = `
-            <header>
+        <header>
             <h2>Demanda de Macro Nutrientes</h2>
             <div onclick='haveNotSoloAnalisis(this)' class="output-solo-analisis">
             <ion-icon class='checkbox' name="checkbox"></ion-icon>
@@ -158,13 +157,15 @@ const renderMain = () => {
 
     
     `
-}
-
-renderMain();
-renderCalculator(cultures[0].macroNutrients, 'macro-nutrients');
-renderCalculator(cultures[0].acidRegulator, 'calcario');
-
-window.addEventListener('resize', function () {
     renderCalculator(cultures[0].macroNutrients, 'macro-nutrients');
     renderCalculator(cultures[0].acidRegulator, 'calcario');
-}, true);
+    window.addEventListener('resize', function () {
+        renderCalculator(cultures[0].macroNutrients, 'macro-nutrients');
+        renderCalculator(cultures[0].acidRegulator, 'calcario');
+    }, true);
+}
+
+/*/
+renderMain();
+//*/
+

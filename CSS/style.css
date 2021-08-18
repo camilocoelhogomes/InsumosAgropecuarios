@@ -50,6 +50,7 @@
     height: 38px;
     border-radius: 38px;
     border: none;
+    cursor: pointer;
 }
 
 .main {
