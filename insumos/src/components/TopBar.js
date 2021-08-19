@@ -5,7 +5,6 @@ const TopBar = () => {
 
             <header class="menu-superior">
 
-
                 <h1>Insumos Agropecuários</h1>
 
                 <div class="navegacao">
