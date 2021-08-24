@@ -1,6 +1,7 @@
 import '../css/Navigation.css';
 
-const TopBar = () => {
+const TopBar = (props) => {
+
     const navigation = [
         {
             label: 'Tela Inicial',
