@@ -1,0 +1,37 @@
+.macro-nutrients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.macro-nutrients-inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.macro-nutrients-input{
+    width: 80%;
+    margin: 10px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.recomendation-button{
+    background-color: #73B8C9;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    height: 50px;
+    width: 250px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 15px;
+
+}

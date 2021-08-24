@@ -3,7 +3,6 @@ import '../css/Calculator.css'
 
 const Calculator = (props) => {
 
-    console.log(props)
     return (
         <>
 
@@ -15,7 +14,7 @@ const Calculator = (props) => {
             </header>
 
             <section>
-                <MacroNutrients />
+                <MacroNutrients calculator={props.calculators[0]} />
 
             </section>
         </>
