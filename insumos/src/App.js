@@ -1,8 +1,8 @@
-import TopBar from "./components/TopBar";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <TopBar />
+    <Navigation />
   );
 }
 
