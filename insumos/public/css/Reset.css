@@ -54,3 +54,7 @@ a{
 *{
 	box-sizing: border-box;
 }
+
+.root{
+	padding: 20px;
+}
