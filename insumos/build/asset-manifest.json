@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/InsumosAgropecuarios/static/css/main.937cf92d.chunk.css",
+    "main.js": "/InsumosAgropecuarios/static/js/main.2d292bab.chunk.js",
+    "main.js.map": "/InsumosAgropecuarios/static/js/main.2d292bab.chunk.js.map",
+    "runtime-main.js": "/InsumosAgropecuarios/static/js/runtime-main.cd691af7.js",
+    "runtime-main.js.map": "/InsumosAgropecuarios/static/js/runtime-main.cd691af7.js.map",
+    "static/js/2.3c0c41b8.chunk.js": "/InsumosAgropecuarios/static/js/2.3c0c41b8.chunk.js",
+    "static/js/2.3c0c41b8.chunk.js.map": "/InsumosAgropecuarios/static/js/2.3c0c41b8.chunk.js.map",
+    "index.html": "/InsumosAgropecuarios/index.html",
+    "static/css/main.937cf92d.chunk.css.map": "/InsumosAgropecuarios/static/css/main.937cf92d.chunk.css.map",
+    "static/js/2.3c0c41b8.chunk.js.LICENSE.txt": "/InsumosAgropecuarios/static/js/2.3c0c41b8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd691af7.js",
+    "static/js/2.3c0c41b8.chunk.js",
+    "static/css/main.937cf92d.chunk.css",
+    "static/js/main.2d292bab.chunk.js"
+  ]
+}
