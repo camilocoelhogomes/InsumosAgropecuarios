@@ -3,7 +3,7 @@ import '../css/Calculator.css';
 
 
 
-const Calculator = ({ navigation, changeInput }) => {
+const Calculator = ({ navigation, changeInput, decInput, accInput }) => {
     const calculatorInputs = navigation[1].subItens[0].inputs;
 
     return (
@@ -12,7 +12,10 @@ const Calculator = ({ navigation, changeInput }) => {
                 <CalculatorInput
                     input={navigation[1].subItens[0].inputs[input]}
                     name={input} hasSoloAnalisys={navigation[1].config.hasSoloAnalisys}
-                    changeInput={changeInput} />)}
+                    changeInput={changeInput}
+                    decInput={decInput}
+                    accInput={accInput}
+                />)}
         </ul>
     )
 }

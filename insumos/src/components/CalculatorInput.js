@@ -4,7 +4,7 @@ import { Add, Remove } from '@material-ui/icons';
 
 import '../css/CalculatorInput.css'
 
-const CalculatorInput = ({ input, name, hasSoloAnalisys, changeInput }) => {
+const CalculatorInput = ({ input, name, hasSoloAnalisys, changeInput, decInput, accInput }) => {
 
 
     if (!hasSoloAnalisys && (name === 'phosphor' || name === 'potassium')) {
@@ -17,15 +17,21 @@ const CalculatorInput = ({ input, name, hasSoloAnalisys, changeInput }) => {
                 <TextField
                     fullWidth
                     value={input.value}
-                    onChange={(event) => changeInput(event.target.value, name)}
+                    onChange={() => changeInput(name)}
                 />
             </div>
             <div className='input-change-buttons'>
                 <Fab size='small' color='secondary'>
-                    <Remove style={{ color: '#FFFFFF' }} />
+                    <Remove
+                        style={{ color: '#FFFFFF' }}
+                        onClick={() => decInput(name)}
+                    />
                 </Fab>
                 <Fab size='small' color='secondary'>
-                    <Add style={{ color: '#FFFFFF' }} />
+                    <Add
+                        style={{ color: '#FFFFFF' }}
+                        onClick={() => accInput(name)}
+                    />
                 </Fab>
             </div>
         </li>

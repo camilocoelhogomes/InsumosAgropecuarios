@@ -89,6 +89,32 @@ function App() {
 		setNavigation(userNavigation);
 	}
 
+	const decInput = (name) => {
+		const userNavigation = [...navigation];
+		let step = 0;
+		if (name === 'productivity') { step = 5 }
+		if (name === 'distanceLines') { step = 0.5 }
+		if (name === 'distancePlants') { step = 0.1 }
+		if (name === 'temperature') { step = 1 }
+		if (name === 'phosphor') { step = 1 }
+		if (name === 'potassium') { step = 10 }
+		userNavigation[1].subItens[0].inputs[name].value -= step;
+		setNavigation(userNavigation);
+	}
+
+	const accInput = (name) => {
+		const userNavigation = [...navigation];
+		let step = 0;
+		if (name === 'productivity') { step = 5 }
+		if (name === 'distanceLines') { step = 0.5 }
+		if (name === 'distancePlants') { step = 0.1 }
+		if (name === 'temperature') { step = 1 }
+		if (name === 'phosphor') { step = 1 }
+		if (name === 'potassium') { step = 10 }
+
+		userNavigation[1].subItens[0].inputs[name].value += step;
+		setNavigation(userNavigation);
+	}
 
 	return (
 		<div className='root'>
@@ -105,7 +131,12 @@ function App() {
 				<ul className='calculator-navigation'>
 					<li className='calculator-navigation-item'>Macro Nutrientes</li>
 				</ul>
-				<Calculator navigation={navigation} changeInput={changeInput} />
+				<Calculator
+					navigation={navigation}
+					changeInput={changeInput}
+					decInput={decInput}
+					accInput={accInput}
+				/>
 			</MuiThemeProvider>
 		</div>
 	);
